@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css'
+            rel='stylesheet' />
+        <link rel="stylesheet"
+            href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+            type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Corona Cases</title>
+       
+       <style>
+        *{
+            margin: 0;
+            padding: 0;
+         }
+         #map{
+            height: 100vh;
+            width: 100vw;
+         }
+         #marker {
+            background-image: url(/corona_index.github.io/corona2.png);
+            background-size: contain;
+            width: 34px;
+            height: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+         }
+
+        .mapboxgl-popup-content{
+            background-color: #5cdfe7;
+            border-radius: 16px;
+            font-weight: bold;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div id='map'></div>
+    </body>
+
+
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script><script
+        src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    
+    
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGFwcHlkaWxyYWoiLCJhIjoiY2w0bGJrZWw0MHJoejNpbnhhb2FwZDF2MyJ9.zJucH5aP_S4b-pk8Z6_exA';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 1 // starting zoom
+    });
+    </script>
+    
+    <script src="/corona_index.github.io/index.js"></script>
+
+
+</html>
